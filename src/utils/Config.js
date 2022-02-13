@@ -12,7 +12,7 @@ class Config {
 
     static characterWidth = 30;
     static characterHeight = 55;
-    static checkDetectBnd = 4;
+    static checkDetectBnd = 10;
 
     static basicRampWidth = 40;
     static basicRampHeight = 30;
