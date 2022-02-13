@@ -1,0 +1,8 @@
+const ModeEnum = {
+    STATIONARY: 0,
+    JUMPING_UP: 1,
+    JUMPING_HIGHEST_POINT: 2,
+    JUMPING_DOWN: 3,
+    MOVE_RIGHT: 4,
+    MOVE_LEFT: 5
+}

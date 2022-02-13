@@ -1,0 +1,60 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Okay not to be okay / Fire and Ice</title>
+    <link href="styles.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+
+    <!--  libs  -->
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.4.0/lib/p5.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    
+
+    <!--  main sketch  -->
+    <script src="src/sketch.js"></script>
+
+    <!--  classes  -->
+    <script src="src/classes/object/VPictureObject.js"></script>
+    <script src="src/classes/object/VPlayerObject.js"></script>
+    <script src="src/classes/object/VBlock.js"></script>
+    <script src="src/classes/object/VMovingObject.js"></script>
+    <script src="src/classes/geometry/VRect.js"></script>
+    <script src="src/classes/object/VRamp.js"></script>
+    <script src="src/classes/object/VStripe.js"></script>
+
+    <!--  enums  -->
+    <script src="src/enums/ModeEnums.js"></script>
+    <script src="src/enums/ObjectEnums.js"></script>
+    <script src="src/enums/GameModeEnum.js"></script>
+    <script src="src/enums/ObjectDirectionEnum.js"></script>
+    <script src="src/enums/RampStatusEnum.js"></script>
+
+    <!--  utils  -->
+    <script src="src/utils/Config.js"></script>
+
+    <!--  algorithms  -->
+
+    <style>
+        body {
+          background-image: url('assets/background_4.jpeg');
+          background-repeat: no-repeat;
+          background-attachment: fixed;  
+          background-size: cover;
+        }
+    </style>
+
+</head>
+<body>
+    <h3 id="thankYouTextForManca">Rad te imam Manca<br> hvala, da si si vzela čas in igro odigrala :)</h3>
+    <button class="menuBtn" onClick="startGame()" id="playBtn" type="button">Play</button>
+    <button class="menuBtn" onClick="resumeGame()" id="resumeBtn" type="button">Resume</button>
+    <button class="menuBtn" onClick="reloadLevel()" id="reloadLevelBtn" type="button">Reload level</button>
+    <button class="menuBtn" onClick="startGame()" id="restartGameBtn" type="button">Restart game</button>
+
+    <div id="canvas">
+    </div>
+</body>
+</html>
