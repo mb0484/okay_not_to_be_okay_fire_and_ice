@@ -27,7 +27,7 @@ let buildGreenWaterImage;
 
 let prevMovingObjectBlock = undefined;
 
-let enableMapBuild = false;
+let enableMapBuild = true;
 
 let levels = ["level_1.json", "level_2.json", "level_3.json"];
 let curLevel = 2;
@@ -105,11 +105,11 @@ function draw() {
         fireBoyGates && fireBoyGates.show();
         iceGirlGates && iceGirlGates.show();
 
-        buildMode === GameModeEnum.NORMAL && fireBoy.update();
-        buildMode === GameModeEnum.NORMAL && fireBoy.show();
-
         buildMode === GameModeEnum.NORMAL && iceGirl.update();
         buildMode === GameModeEnum.NORMAL && iceGirl.show();
+
+        buildMode === GameModeEnum.NORMAL && fireBoy.update();
+        buildMode === GameModeEnum.NORMAL && fireBoy.show();
 
         for (let vWall of walls) {
             vWall.show();
@@ -719,6 +719,22 @@ function clearMap() {
     iceGirlGates = undefined;
 
     this.createWallBoundaries();
+
+    fireBoy.walls = walls;
+    fireBoy.fireElements = fireElements;
+    fireBoy.movingObjects = movingElements;
+    fireBoy.stripeWalls = stripeWalls;
+    fireBoy.ramps = ramps;
+    fireBoy.curActiveMovingObject = undefined;
+    fireBoy.gates = fireBoyGates;
+
+    iceGirl.walls = walls;
+    iceGirl.fireElements = fireElements;
+    iceGirl.movingObjects = movingElements;
+    iceGirl.stripeWalls = stripeWalls;
+    iceGirl.ramps = ramps;
+    iceGirl.curActiveMovingObject = undefined;
+    iceGirl.gates = iceGirlGates;
 }
 
 function startGame() {
