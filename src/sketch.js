@@ -29,8 +29,8 @@ let prevMovingObjectBlock = undefined;
 
 let enableMapBuild = true;
 
-let levels = ["level_1.json", "level_2.json", "level_3.json"];
-let curLevel = 2;
+let levels = ["level_2023_1.json"] //["level_1.json", "level_2.json", "level_3.json"];
+let curLevel = 0;
 
 let gameOver = false;
 
@@ -549,6 +549,8 @@ function download(data, name) {
 
 function loadLevel() {
     loadCharacters();
+
+    console.log("levels[curLevel]: ", levels[curLevel])
 
     $.getJSON("levels/" + levels[curLevel], function(level) {    
         walls = [];
