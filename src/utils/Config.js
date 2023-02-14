@@ -4,7 +4,7 @@ class Config {
 
     static basicWallColor = '#4229ff'; // #2776f5 #BC4A3C
     static createdWallColor = '#FF0000';
-    static basicMovingObjectColor = "#FF00FF";
+    static basicMovingObjectColor = "#FF00FF00";
 
     static blockWidth = 20;
     static blockHeight = 15;

@@ -264,7 +264,8 @@ class VPlayerObject {
                 break;
         }
 
-        this.rect.show();
+        //DEBUG show character rectangle
+        //this.rect.show();
 
         image(curSelectedImage, 
             this.rect.upperLeftCorner(true).x, 
